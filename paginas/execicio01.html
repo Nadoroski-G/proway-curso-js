@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script src="../assets/js/exercicio01.js"></script>
+<body>
+
+    <h1>Cadastro de Produtos</h1>
+
+    <form action="#" method="post">
+        <div>
+            <label for="campo-produto">Nome do Produto</label>
+            <input type="text" id="campo-produto" name="Nome" placeholder="Digite o nome do produto">
+        </div>
+        <div>
+            <label for="campo-quantidade">Quantidade do Produto</label>
+            <input type="number" id="campo-quantidade" name="Quantidade" placeholder="Coloque a quantidade do produto" onblur=" preencherTotalProduto()">
+        </div>
+        <div>
+            <label for="campo-preco">Preço por Unidade</label>
+            <input type="number" id="campo-preco" name="Preço" placeholder="Coloque o preço por unidade" step="0.01" onblur=" preencherTotalProduto()">
+        </div>
+        <div>
+            Total: R$<span id="total-parcial">0,00</span>
+        </div>
+
+        <button type="button" onclick="Registrar()">Cadastrar</button>
+        <button type="button" onclick="Limpar()">Limpar Campos</button>
+    </form>
+
+    <label for="campo-registro">Registro de Produtos</label> <br>
+    <textarea name="Registro" id="campo-registro" disabled readonly rows="8" cols="40"></textarea> <br>
+    <button type="button" onclick="Zerar()">Limpar Registros</button>
+    <button type="button" onclick="mostrarCadastros()">Mostrar Registros</button>
+</body>
+</html>
